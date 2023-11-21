@@ -19,10 +19,10 @@ st.title('50startup')
 st.write("This app uses 6 inputs to predict the Variety of Iris using "
          "a model built on the Palmer's Iris's dataset. Use the form below"
          " to get started!")
-
+document="model1"
 csv_file = st.file_uploader('Upload your own Iris data')
 if csv_file is None:
-    linear_pickle = pickle.load(open('model1','rb'))
+    linear_pickle = pickle.load(open(document,'rb'))
 else:
     df = pd.read_csv(csv_file)
     # iris_df = iris_df.dropna()
