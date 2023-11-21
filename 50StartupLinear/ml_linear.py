@@ -82,7 +82,7 @@ with st.form('user_inputs'):
     st.form_submit_button()
 
 
-model = pickle.load(open('model1', 'rb'))
+model = pickle.load(open('50StartupLinear/model1', 'rb'))
 new_prediction =model.predict([[RD_Spend, administration, marketing_spend]])
 # prediction_species = unique_penguin_mapping[new_prediction][0]
 textpredict = '<p style="font-family:Courier; color:Black; font-size: 20px;">We predict your Profit is of the {} US</p>'
