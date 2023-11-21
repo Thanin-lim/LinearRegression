@@ -26,7 +26,7 @@ if csv_file is None:
 else:
     df = pd.read_csv(csv_file)
     # iris_df = iris_df.dropna()
-    linear_pickle = pickle.load(open('model1', 'rb'))
+    linear_pickle = pickle.load(open(document, 'rb'))
     output = df['Profit']
     features = df[['R&D Spend',
            'Administration',
