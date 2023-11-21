@@ -22,11 +22,11 @@ st.write("This app uses 6 inputs to predict the Variety of Iris using "
 document="model1"
 csv_file = st.file_uploader('Upload your own Iris data')
 if csv_file is None:
-    linear_pickle = pickle.load(open(document,'rb'))
+    linear_pickle = pickle.load(open('50StartupLinear/model1','rb'))
 else:
     df = pd.read_csv(csv_file)
     # iris_df = iris_df.dropna()
-    linear_pickle = pickle.load(open(document, 'rb'))
+    linear_pickle = pickle.load(open('50StartupLinear/model1', 'rb'))
     output = df['Profit']
     features = df[['R&D Spend',
            'Administration',
