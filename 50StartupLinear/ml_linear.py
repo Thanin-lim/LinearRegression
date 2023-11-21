@@ -22,7 +22,7 @@ st.write("This app uses 6 inputs to predict the Variety of Iris using "
 
 csv_file = st.file_uploader('Upload your own Iris data')
 if csv_file is None:
-    linear_pickle = pickle.load(open('/mount/src/linearregression/50StartupLinear/model1.pkl', 'rb'))
+    linear_pickle = pickle.load(open('/mount/src/linearregression/50StartupLinear/model1.pkl','rb'))
 else:
     df = pd.read_csv(csv_file)
     # iris_df = iris_df.dropna()
